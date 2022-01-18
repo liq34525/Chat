@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width:767px){
+    #app-view{width: 100%;height: 100%;display: flex;flex-direction:column;}
+}
+
+@media only screen and (min-width:768px) and (max-width: 1023px){
+    #app-view{width: 90%;height: 100%;display: flex;flex-direction:column;}
+}
+
+@media only screen and (min-width: 1024px){
+    #app-view{width: 80%;height: 100%;display: flex;flex-direction:column;}
+}
+
+#app-menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:cornflowerblue;
+}
+.menu-item{
+    float: left;
+}
+.menu-item a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+}
+.menu-item a div{
+    display: none;
+}
+.menu-item a:hover{
+    background-color: red;
+    color: black;
+}
+.menu-item a:hover div{
+    display: initial;
+}
+#page-view{
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow-y:auto;
+}
+.page-control{
+    position: fixed;
+    bottom: 0px;
+    left:30%;
+    width: calc(100%-224px);
+}
+.page-control textarea{
+    background-color: white;
+}
+
+/*index*/
+.room-list a{
+   display: block;
+   color:black;
+   border: solid 1px cornflowerblue;
+   border-bottom-width: 1px
+}
+.room-list a:hover{
+    background-color: cornflowerblue;
+}
+
+/*chat*/
+.message-list{
+    min-height: 50px;
+    max-height: 520px;
+    overflow-y: auto;
+}
+.message div{
+    margin:12px;
+    background-color: lemonchiffon;
+    padding:5px 8px;
+    word-break: break-all;
+    border: 1px solid #989898;
+    border-radius: 5px;
+    max-width:180px;
+    clear: both;
+}
+.my-message div{
+    background-color: lawngreen;
+}
+.message-user{
+    display: block;
+    font-weight: bold;
+}
+.my-message{
+    float:right;
+    clear:both;
+}
+
+/*profile*/
+.form-field{
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    padding: 0 .625em;
+    font-size: 20px;
+ }
+
+ .form-field label{
+        cursor: pointer;
+        display: inline-block;
+        padding: 3px 6px;
+        text-align: right;
+        width: 150px;
+        vertical-align: top;
+}
